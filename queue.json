@@ -109,5 +109,68 @@
     "caption": "Tip: zet je prijzen en openingstijden goed in Koa — dan noemt 'ie altijd jóuw tarieven en tijden, niet iets algemeens. 💡 @koa_ai\n\n#ondernemerstips #kapper #salon #mkb",
     "slug": "startbank-15",
     "source": "startbank"
+  },
+  {
+    "media": [
+      "https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-16-0-nagels_beauty-chat.png"
+    ],
+    "caption": "Zondagavond kwart voor elf. Jij ligt op de bank, Koa beantwoordt de vraag, noemt prijs en duur, en plant de afspraak direct in je agenda. Klantvragen op WhatsApp, 24/7 beantwoord in jouw stem — ook als jij allang klaar bent voor vandaag. 💅\n\n#nagelstudio #biab #beautysalon #mkb #whatsappbot",
+    "branche": "nagels_beauty",
+    "source": "claude-fable-5",
+    "slug": "2026-07-16-0-nagels_beauty-chat"
+  },
+  {
+    "media": [
+      "https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-16-1-kapper-chat.png"
+    ],
+    "caption": "Jij lag op de bank. Koa boekte de afspraak. 💬✂️\n\nKlanten appen wanneer het hén uitkomt — vaak 's avonds. Koa antwoordt 24/7 in de stem van jouw zaak, noemt prijs en duur, en zet de afspraak direct in je agenda. Jij ziet 'm de volgende ochtend gewoon staan.\n\nLive in ~15 minuten, geen technische kennis nodig. Link in bio 👆\n\n#kapper #barbershop #salonleven #whatsappvoorbedrijven #mkbnederland",
+    "branche": "kapper",
+    "source": "claude-fable-5",
+    "slug": "2026-07-16-1-kapper-chat"
+  },
+  {
+    "media": [
+      "https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-16-2-nagels_beauty-tip.png"
+    ],
+    "caption": "Kleine moeite, groot verschil: klanten die vooraf prijs én duur zien, twijfelen minder. 💅 Psst: Koa kent jouw behandelingen, noemt prijs en duur in de chat en boekt direct in je agenda — 24/7, ook als jij met je handen vol zit.\n\n#nagelstudio #beautysalon #pedicure #ondernemerstip #mkb",
+    "branche": "nagels_beauty",
+    "source": "claude-fable-5",
+    "slug": "2026-07-16-2-nagels_beauty-tip"
+  },
+  {
+    "media": [
+      "https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-16-3-kapper-chat.png"
+    ],
+    "caption": "Jouw zaak is dicht. Je klant appt toch. 💬\n\nKoa antwoordt in jouw stem, noemt prijs en duur, en zet de afspraak direct in je agenda. Ook om kwart voor tien 's avonds.\n\nJij? Die ziet 'm de volgende ochtend gewoon in het week-overzicht staan. ✅\n\nBinnen ~15 minuten live, geen technische kennis nodig. Link in bio 👆\n\n#kapper #barbier #kapsalon #mkb #ondernemen",
+    "branche": "kapper",
+    "source": "claude-fable-5",
+    "slug": "2026-07-16-3-kapper-chat"
+  },
+  {
+    "media": [
+      "https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-16-4-nagels_beauty-chat.png"
+    ],
+    "caption": "Klanten appen wanneer het hén uitkomt — vaak 's avonds, als jouw studio dicht is. Koa antwoordt in jouw stem, noemt prijs en duur, en plant de afspraak meteen in. Jij ziet 'm de volgende ochtend gewoon in je agenda staan. Binnen ~15 minuten live, geen technische kennis nodig. 💬✨\n\n#nagelstudio #beautysalon #biab #ondernemen #whatsappvoorbedrijven",
+    "branche": "nagels_beauty",
+    "source": "claude-fable-5",
+    "slug": "2026-07-16-4-nagels_beauty-chat"
+  },
+  {
+    "media": [
+      "https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-16-5-beide-statement.png"
+    ],
+    "caption": "Kapper of nagelstylist? Je handen zijn bezig, maar de appjes blijven binnenkomen. Koa vangt ze op — beantwoordt klantvragen 24/7 en plant afspraken meteen in je agenda, in jouw eigen stem. Live in zo'n 15 minuten, zonder technische kennis. 💬✂️💅\n\n#kapper #nagelstudio #whatsappvoorondernemers #mkb #afsprakenplannen",
+    "branche": "beide",
+    "source": "claude-opus-4-8",
+    "slug": "2026-07-16-5-beide-statement"
+  },
+  {
+    "media": [
+      "https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-16-6-nagels_beauty-chat.png"
+    ],
+    "caption": "Klanten appen wanneer het hén uitkomt — vaak 's avonds op de bank. Koa antwoordt in jouw stem, kent je prijzen en duur per behandeling, en plant de afspraak direct in je agenda. Jij ziet 'm de volgende ochtend gewoon in je week-overzicht staan. Live in ~15 minuten, geen technische kennis nodig. 📲\n\n#nagelstudio #biab #beautysalon #mkb #whatsappbot",
+    "branche": "nagels_beauty",
+    "source": "claude-fable-5",
+    "slug": "2026-07-16-6-nagels_beauty-chat"
   }
 ]
