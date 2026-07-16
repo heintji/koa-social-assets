@@ -1,0 +1,37 @@
+name: Dagelijkse Instagram-post
+
+on:
+  schedule:
+    - cron: "0 17 * * *"   # elke dag 17:00 UTC (~18:00/19:00 NL)
+  workflow_dispatch: {}      # handmatig starten kan ook
+
+permissions:
+  contents: write
+
+concurrency:
+  group: koa-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Plaats de eerstvolgende post
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: python post_next.py
+      - name: Wachtrij bijwerken (commit)
+        run: |
+          if ! git diff --quiet -- queue.json; then
+            git config user.name "koa-poster"
+            git config user.email "actions@github.com"
+            git add queue.json
+            git commit -m "post geplaatst — wachtrij bijgewerkt"
+            git push
+          else
+            echo "geen wijziging in queue.json"
+          fi
