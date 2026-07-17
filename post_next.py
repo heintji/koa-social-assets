@@ -39,15 +39,43 @@ def publish(item):
     if "id" in pub: print("GEPUBLICEERD:", item.get("slug", "?"), "media", pub["id"]); return True
     print("publiceren mislukt:", pub.get("error", pub)); return False
 
+def publish_story(video_url):
+    """Plaats een video als Story (media_type=STORIES) met verwerkings-check."""
+    c = post("/me/media", video_url=video_url, media_type="STORIES")
+    if "id" not in c:
+        print("story-aanmaken mislukt:", c.get("error", c)); return False
+    cid = c["id"]
+    for _ in range(20):
+        r = json.loads(urllib.request.urlopen(
+            "%s/%s?fields=status_code&access_token=%s" % (BASE, cid, TOKEN), timeout=30).read().decode())
+        sc = r.get("status_code")
+        if sc == "FINISHED":
+            break
+        if sc == "ERROR":
+            print("story-verwerking mislukt"); return False
+        time.sleep(6)
+    pub = post("/me/media_publish", creation_id=cid)
+    if "id" in pub:
+        print("STORY GEPLAATST:", pub["id"]); return True
+    print("story-publiceren mislukt:", pub.get("error", pub)); return False
+
+
 def main():
     if not TOKEN:
         print("Geen IG_ACCESS_TOKEN"); sys.exit(1)
     q = json.load(open(QUEUE)) if os.path.exists(QUEUE) else []
     if not q:
         print("Wachtrij leeg — niets te plaatsen."); return
-    if publish(q[0]):
+    item = q[0]
+    if publish(item):
         json.dump(q[1:], open(QUEUE, "w"), indent=2, ensure_ascii=False)
         print("Wachtrij nu:", len(q) - 1)
+        # ook als story, indien een story-video is meegeleverd
+        if item.get("story"):
+            try:
+                publish_story(item["story"])
+            except Exception as e:
+                print("story overgeslagen:", e)
     else:
         sys.exit(1)  # laat de post in de wachtrij; volgende run opnieuw
 
