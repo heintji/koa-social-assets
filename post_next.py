@@ -60,6 +60,24 @@ def publish_story(video_url):
     print("story-publiceren mislukt:", pub.get("error", pub)); return False
 
 
+def note_story(item):
+    """Story NIET automatisch plaatsen (dan kan Hein zelf IG-muziek kiezen),
+    maar op een 'nog te plaatsen'-lijst zetten met een downloadbaar beeld."""
+    img = item.get("story_img") or item.get("story")
+    if not img:
+        return
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stories-te-plaatsen.md")
+    if not os.path.exists(path):
+        open(path, "w").write(
+            "# Story's nog te plaatsen 📲\n\n"
+            "Voor elke geplaatste post staat hier het bijbehorende story-beeld klaar. "
+            "Download het, zet 't in de Instagram-app als **Story**, en voeg je eigen **muziek** toe. "
+            "Vink af (`[x]`) als 't geplaatst is.\n\n")
+    open(path, "a").write(
+        "- [ ] **%s** — [download beeld](%s) → Instagram-app → Story → muziek erbij\n"
+        % (item.get("slug", "?"), img))
+    print("STORY TE PLAATSEN genoteerd:", item.get("slug"))
+
 def main():
     if not TOKEN:
         print("Geen IG_ACCESS_TOKEN"); sys.exit(1)
@@ -70,12 +88,8 @@ def main():
     if publish(item):
         json.dump(q[1:], open(QUEUE, "w"), indent=2, ensure_ascii=False)
         print("Wachtrij nu:", len(q) - 1)
-        # ook als story, indien een story-video is meegeleverd
-        if item.get("story"):
-            try:
-                publish_story(item["story"])
-            except Exception as e:
-                print("story overgeslagen:", e)
+        # story NIET auto-plaatsen -> op de lijst zetten voor handmatig plaatsen + eigen muziek
+        note_story(item)
     else:
         sys.exit(1)  # laat de post in de wachtrij; volgende run opnieuw
 

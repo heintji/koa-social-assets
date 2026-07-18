@@ -24,14 +24,14 @@ jobs:
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         run: python post_next.py
-      - name: Wachtrij bijwerken (commit)
+      - name: Wachtrij + story-lijst bijwerken (commit)
         run: |
-          if ! git diff --quiet -- queue.json; then
-            git config user.name "koa-poster"
-            git config user.email "actions@github.com"
-            git add queue.json
-            git commit -m "post geplaatst — wachtrij bijgewerkt"
+          git config user.name "koa-poster"
+          git config user.email "actions@github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "post geplaatst — wachtrij + story-lijst bijgewerkt"
             git push
           else
-            echo "geen wijziging in queue.json"
+            echo "geen wijzigingen"
           fi
