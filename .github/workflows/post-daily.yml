@@ -2,7 +2,7 @@ name: Dagelijkse Instagram-post
 
 on:
   schedule:
-    - cron: "0 17 * * *"   # elke dag 17:00 UTC (~18:00/19:00 NL)
+    - cron: "0 17 * * 2,5"   # di + vr 17:00 UTC (~18:00/19:00 NL) — 2x/week i.p.v. dagelijks
   workflow_dispatch: {}      # handmatig starten kan ook
 
 permissions:
