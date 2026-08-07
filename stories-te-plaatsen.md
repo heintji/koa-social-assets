@@ -9,3 +9,4 @@ Voor elke geplaatste post staat hier het bijbehorende story-beeld klaar. Downloa
 - [ ] **2026-07-17-5-kapper-sfeer** — [download beeld](https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-17-5-kapper-sfeer-story.png) → Instagram-app → Story → muziek erbij
 - [ ] **startbank-12** — [download beeld](https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/startbank-12-story.png) → Instagram-app → Story → muziek erbij
 - [ ] **2026-07-17-7-nagels_beauty-sfeer** — [download beeld](https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-17-7-nagels_beauty-sfeer-story.png) → Instagram-app → Story → muziek erbij
+- [ ] **startbank-03** — [download beeld](https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/startbank-03-story.png) → Instagram-app → Story → muziek erbij
