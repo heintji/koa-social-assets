@@ -4,7 +4,7 @@ Niet-lokale poster (draait op GitHub Actions). Plaatst de eerstvolgende post uit
 op @koa_ai via de Instagram Graph API. Verwijdert 'm daarna uit de wachtrij.
 Token via env IG_ACCESS_TOKEN (GitHub secret). Geen externe libs.
 """
-import os, sys, json, time, urllib.parse, urllib.request, urllib.error
+import os, sys, json, time, re, urllib.parse, urllib.request, urllib.error
 
 BASE = "https://graph.instagram.com/v21.0"
 QUEUE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "queue.json")
@@ -21,6 +21,9 @@ def post(path, **params):
 
 def publish(item):
     urls, caption = item["media"], item["caption"]
+    if any(int(days) != 14 for days in re.findall(r"\b(\d+)\s+dagen?\s+(?:gratis|proef)", caption.lower())):
+        print("Publicatie geblokkeerd: proefperiode wijkt af van 14 dagen.")
+        return False
     if len(urls) == 1:
         c = post("/me/media", image_url=urls[0], caption=caption)
         if "id" not in c: print("aanmaken mislukt:", c.get("error", c)); return False
