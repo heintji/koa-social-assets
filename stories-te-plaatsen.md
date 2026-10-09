@@ -27,3 +27,4 @@ Voor elke geplaatste post staat hier het bijbehorende story-beeld klaar. Downloa
 - [ ] **2026-07-16-4-nagels_beauty-chat** — [download beeld](https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-16-4-nagels_beauty-chat-story.png) → Instagram-app → Story → muziek erbij
 - [ ] **2026-07-16-5-beide-statement** — [download beeld](https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-16-5-beide-statement-story.png) → Instagram-app → Story → muziek erbij
 - [ ] **2026-07-16-6-nagels_beauty-chat** — [download beeld](https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-16-6-nagels_beauty-chat-story.png) → Instagram-app → Story → muziek erbij
+- [ ] **2026-07-30-0-nagels_beauty-chat** — [download beeld](https://raw.githubusercontent.com/heintji/koa-social-assets/main/daily/2026-07-30-0-nagels_beauty-chat-story.png) → Instagram-app → Story → muziek erbij
